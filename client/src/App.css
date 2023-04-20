@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.bg-image{
+  background-image: url(../public/pictures/download.jpeg);
+  background-color: black;
+  opacity: 0.60;
+}
