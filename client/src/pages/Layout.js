@@ -6,7 +6,7 @@ import Home from './Home';
 import Contact from './Contact';
 import About from './About';
 import Shop from './Shop';
-
+import Services from './Services';
 
 function layout() {
   return (
@@ -19,7 +19,7 @@ function layout() {
 
 <div className="container">
 
-	<a className="navbar-brand" href="index.html">ArtBS<span>.</span></a>
+	<NavLink className="navbar-brand" href="index.html" to="/">ArtBS<span>.</span></NavLink>
 
 	<button className="navbar-toggler" type="button" >
 		<span className="navbar-toggler-icon"></span>
@@ -29,16 +29,7 @@ function layout() {
 		<ul className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 ">
 			<li className="nav-item active"><NavLink className="nav-link" to="/">Home</NavLink></li>
 			<li><NavLink className="nav-link" href="Shop" to="/Shop">Shop</NavLink></li>
-	
-	<li className="nav-item dropdown">
-				<a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Categories
-				</a><div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				  <a className="dropdown-item" href="#">Action</a>
-				  <a className="dropdown-item" href="#">Another action</a>
-				  <a className="dropdown-item" href="#">Something else here</a>
-	</div>
-			  </li>
+			<li><NavLink className="nav-link" href="Services" to="/Services">Services</NavLink></li>
 			<li><NavLink className="nav-link " href="" to="/About">About Us</NavLink></li>
 			<li><NavLink className="nav-link " href="" to="/Contact">Contact Us</NavLink></li>
 		</ul>
@@ -58,13 +49,14 @@ function layout() {
 			<Route path='/Contact' element={<Contact/>}/>
 			<Route path='/About' element={<About/>}/>
 			<Route path='/Shop' element={<Shop/>}/>
+			<Route path='/Services' element={<Services/>}/>
 		</Routes>
 	</main>
 </BrowserRouter>
 
 {/* footer of this page */}
 <div className=" bg-primary bg-gradient">
-<footer className="footer-section position-absolute end-0 ">
+<footer className="footer-section  ">
 			<div className="container relative">
 
 				<div className="sofa-img">
