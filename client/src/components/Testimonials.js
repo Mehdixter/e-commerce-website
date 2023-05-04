@@ -1,106 +1,63 @@
-import React from 'react'
-import TinySlider from 'tiny-slider-react';
+import React from "react";
+import TinySlider from "tiny-slider-react";
 
 function Testimonials() {
   return (
-    <div>
-        <div className="testimonial-section before-footer-section">
-			<div className="container">
-				<div className="row">
-					<div className="col-lg-7 mx-auto text-center">
-						<h2 className="section-title">Testimonials</h2>
-					</div>
-				</div>
-
-				<div className="row justify-content-center">
-					<div className="col-lg-12">
-						<div className="testimonial-slider-wrap text-center">
-
-							<div id="testimonial-nav">
-								<span className="prev" data-controls="prev"><span className="fa fa-chevron-left"></span></span>
-								<span className="next" data-controls="next"><span className="fa fa-chevron-right"></span></span>
-							</div>
-
-							<div className="testimonial-slider">
-								
-								<div className="item">
-									<div className="row justify-content-center">
-										<div className="col-lg-8 mx-auto">
-
-											<div className="testimonial-block text-center">
-												<blockquote className="mb-5">
-													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-												</blockquote>
-
-												<div className="author-info">
-													<div className="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" className="img-fluid"/>
-													</div>
-													<h3 className="font-weight-bold">Maria Jones</h3>
-													<span className="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div> 
-								{/* <!-- END item --> */}
-
-								<div className="item">
-									<div className="row justify-content-center">
-										<div className="col-lg-8 mx-auto">
-
-											<div className="testimonial-block text-center">
-												<blockquote className="mb-5">
-													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-												</blockquote>
-
-												<div className="author-info">
-													<div className="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" className="img-fluid"/>
-													</div>
-													<h3 className="font-weight-bold">Maria Jones</h3>
-													<span className="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div> 
-								{/* <!-- END item --> */}
-
-								<div className="item">
-									<div className="row justify-content-center">
-										<div className="col-lg-8 mx-auto">
-
-											<div className="testimonial-block text-center">
-												<blockquote className="mb-5">
-													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-												</blockquote>
-
-												<div className="author-info">
-													<div className="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" className="img-fluid"/>
-													</div>
-													<h3 className="font-weight-bold">Maria Jones</h3>
-													<span className="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div> 
-								{/* <!-- END item --> */}
-
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    
+    <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div className="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div className="carousel-inner">
+    <div className="carousel-item active" data-bs-interval="10000">
+    <img
+                                src="images/person-1.png"
+                                alt="Maria Jones"
+                                classNameName="img-fluid"
+                              />
+      <div className="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
     </div>
-  )
+    <div className="carousel-item" data-bs-interval="2000">
+    <img
+                                src="images/person-1.png"
+                                alt="Maria Jones"
+                                classNameName="img-fluid"
+                              />
+      <div className="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div className="carousel-item">
+    <img
+                                src="images/person-1.png"
+                                alt="Maria Jones"
+                                classNameName="img-fluid"
+                              />
+      <div className="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+    );
 }
 
-export default Testimonials
+export default Testimonials;
