@@ -1,33 +1,9 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React from 'react'
 
-function Shop() {
-  const [activeLink, setActiveLink] = useState('Home');
-
-  useEffect(() => {
-    document.title = 'Shop';
-    setActiveLink('/Shop'); // Set the active link to "about"
-  }, []);
-
+const ProductGrid = () => {
   return (
     <div>
-      {/* <!-- Start Hero Section --> */}
-      <div className="hero">
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-lg-5">
-              <div className="intro-excerpt">
-                <h1>Shop</h1>
-              </div>
-            </div>
-            <div className="col-lg-7"></div>
-          </div>
-        </div>
-      </div>
-      {/* <!-- End Hero Section --> */}
-
-      <div className="untree_co-section product-section before-footer-section">
+         <div className="untree_co-section product-section before-footer-section">
         <div className="container">
           <div className="row">
             {/* <!-- Start Column 1 --> */}
@@ -170,7 +146,7 @@ function Shop() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Shop;
+export default ProductGrid

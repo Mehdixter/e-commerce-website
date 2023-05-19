@@ -1,28 +1,9 @@
-import React from "react";
-import {NavLink} from 'react-router-dom';
-function Cart() {
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+function CartGrid() {
   return (
     <div>
-     {/* <!-- Start Hero Section --> */}
-			<div className="hero">
-				<div className="container">
-					<div className="row justify-content-between">
-						<div className="col-lg-5">
-							<div className="intro-excerpt">
-								<h1>Cart</h1>
-							</div>
-						</div>
-						<div className="col-lg-7">
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		{/* <!-- End Hero Section --> */}
-
-		
-
-		<div className="untree_co-section before-footer-section">
+        <div className="untree_co-section before-footer-section">
             <div className="container">
               <div className="row mb-5">
                 <form className="col-md-12" method="post">
@@ -102,18 +83,7 @@ function Cart() {
                       <button className="btn btn-outline-black btn-sm btn-block">Continue Shopping</button>
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <label className="text-black h4" for="coupon">Coupon</label>
-                      <p>Enter your coupon code if you have one.</p>
-                    </div>
-                    <div className="col-md-8 mb-3 mb-md-0">
-                      <input type="text" className="form-control py-3" id="coupon" placeholder="Coupon Code"/>
-                    </div>
-                    <div className="col-md-4">
-                      <button className="btn btn-black">Apply Coupon</button>
-                    </div>
-                  </div>
+                  
                 </div>
                 <div className="col-md-6 pl-5">
                   <div className="row justify-content-end">
@@ -142,7 +112,7 @@ function Cart() {
         
                       <div className="row">
                         <div className="col-md-12">
-                          <button className="btn btn-black btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Proceed To Checkout</button>
+                          <button className="btn btn-black btn-lg py-3 btn-block" onclick="">Proceed To Checkout</button>
                         </div>
                       </div>
                     </div>
@@ -151,10 +121,8 @@ function Cart() {
               </div>
             </div>
           </div>
-		
     </div>
-    
-  );
+  )
 }
 
-export default Cart;
+export default CartGrid

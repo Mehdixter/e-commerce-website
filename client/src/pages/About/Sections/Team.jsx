@@ -1,12 +1,8 @@
 import React from "react";
-import WhyUs from "../components/WhyUs";
-import Testimonials from "../components/Testimonials";
-import {NavLink} from 'react-router-dom';
-function About() {
+import { NavLink } from "react-router-dom";
+function Team() {
   return (
     <div>
-      <WhyUs />
-
       {/* <!-- Start Team Section --> */}
       <div className="untree_co-section">
         <div className="container">
@@ -106,10 +102,8 @@ function About() {
         </div>
       </div>
       {/* <!-- End Team Section --> */}
-
-      <Testimonials />
     </div>
   );
 }
 
-export default About;
+export default Team;
