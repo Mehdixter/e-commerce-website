@@ -16,8 +16,8 @@ function Login() {
   return (
     <div className="site-wrap d-flex align-items-stretch justify-content-center">
       <div className="bg-img "></div>
-      <div className="form-wrap">
-        <div className="form-inner">
+      <div className="form-wrap col-lg-5">
+        <div className="form-inner text-center">
           <h1 className="title text-center">Login</h1>
           <p className="caption mb-4">
             Please enter your login details to sign in.

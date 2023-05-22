@@ -34,7 +34,7 @@ function Footer() {
                       Pellentesque habitant
                     </q>
 
-                    <ul class="list-unstyled custom-social">
+                    <ul className="list-unstyled custom-social">
                       <li>
                         <NavLink to="#">
                           <span className="fa fa-brands fa-facebook-f"></span>

@@ -26,7 +26,8 @@ const SignUp = () => {
     const data = {
       name: register.name,
       email: register.email,
-      password: register.password
+      password: register.password,
+      password_confirmation: register.password
     };
   
     axios.post("http://127.0.0.1:8000/api/register", data).then(result=>{
@@ -39,10 +40,10 @@ const SignUp = () => {
 
   return (
     <div>
-      <div className="site-wrap d-md-flex align-items-stretch justify-content-center">
+      <div className="site-wrap col-lg-12 d-lg-flex align-items-stretch justify-content-center">
         <div className="bg-img"></div>
-        <div className="form-wrap">
-          <div className="form-inner">
+        <div className="form-wrap col-lg-5">
+          <div className="form-inner text-center">
             <h1 className="title">Sign up</h1>
             <p className="caption mb-4">Create your account in seconds.</p>
 
@@ -52,12 +53,12 @@ const SignUp = () => {
                   type="text"
                   value={register.name}
                   onChange={changeData}
-                  className="form-control"
+                  className="form-control form-control-lg"
                   id="name"
                   placeholder="Full Name"
                   name="name"
                 />
-                <label for="name">Full Name</label>
+                <label htmlFor="name">Full Name</label>
               </div>
 
               <div className="form-floating">
@@ -70,7 +71,7 @@ const SignUp = () => {
                   placeholder="info@example.com"
                   name="email"
                 />
-                <label for="email">Email Address</label>
+                <label htmlFor="email">Email Address</label>
               </div>
 
               <div className="form-floating">
@@ -86,7 +87,7 @@ const SignUp = () => {
                   placeholder="Password"
                   name="password"
                 />
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
 
               <div className="d-flex justify-content-between">
@@ -96,8 +97,8 @@ const SignUp = () => {
                     className="form-check-input"
                     id="remember"
                   />
-                  <label for="remember" className="form-check-label">
-                    I agree to the <a href="#">Terms of Service</a> and{" "}
+                  <label htmlFor="services" className="form-check-label">
+                    I agree to the <NavLink to="#">Terms of Service</NavLink> and{" "}
                     <NavLink to="#">Privacy Policy</NavLink>
                   </label>
                 </div>

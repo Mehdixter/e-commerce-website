@@ -16,9 +16,9 @@ function NavBar() {
         className="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark "
         arial-label="Furni navigation bar"
       >
-        <div className="container">
-          <NavLink className="navbar-brand" href="index.html" to="/">
-            ArtBS<span>.</span>
+        <div className="container-fluid">
+          <NavLink className="navbar-brand " to="/">
+            <span>ArtBS</span>
           </NavLink>
 
           <button className="navbar-toggler" type="button">
@@ -28,7 +28,7 @@ function NavBar() {
           <div className="collapse navbar-collapse" id="navbarsFurni">
             <ul className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
               {navigation.map((item) => (
-                <li>
+                <li key={item.name}>
                   <NavLink
                     key={item.name}
                     to={item.href}
@@ -48,30 +48,29 @@ function NavBar() {
             </ul>
 
             <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-              <li>
+              <li key="cart">
                 <NavLink className="nav-link" to="/Cart">
                   <i className="fa-solid fa-cart-shopping"></i>
                 </NavLink>
               </li>
-              <li>
+              <li key="user">
                 <NavLink className="nav-link" to="/Login">
-                  <i class="fa-solid fa-user"></i>
+                  <i className="fa-solid fa-user"></i>
                 </NavLink>
               </li>
             </ul>
-          </div>
-        </div>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
+            <input
+            className="form-control me-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success" type="submit">
+          <button className="btn btn-outline-success" type="submit">
             Search
           </button>
-        </form>
+          </div>
+        </div>
+
       </nav>
     </div>
   );
