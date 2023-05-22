@@ -1,24 +1,61 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+
+
 const SignUp = () => {
+  
+  const [register, setRegister] = useState({
+    name: "",
+    email:"",
+    password:""
+  })
+  function changeData(event) {
+    setRegister((data) => ({
+      ...data,
+      [event.target.name]: event.target.value,
+      [event.target.email]: event.target.value,
+      [event.target.password]: event.target.value
+    }));
+  }
+  //send POST request to laravel
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  
+    const data = {
+      name: register.name,
+      email: register.email,
+      password: register.password
+    };
+  
+    axios.post("http://127.0.0.1:8000/api/register", data).then(result=>{
+      console.log(result.data)
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  };
+
   return (
     <div>
       <div className="site-wrap d-md-flex align-items-stretch justify-content-center">
-        <div
-          className="bg-img"
-        ></div>
+        <div className="bg-img"></div>
         <div className="form-wrap">
           <div className="form-inner">
             <h1 className="title">Sign up</h1>
             <p className="caption mb-4">Create your account in seconds.</p>
 
-            <form action="#" className="pt-3">
+            <form action="#" className="pt-3" onSubmit={handleSubmit}>
               <div className="form-floating">
                 <input
                   type="text"
+                  value={register.name}
+                  onChange={changeData}
                   className="form-control"
                   id="name"
                   placeholder="Full Name"
+                  name="name"
                 />
                 <label for="name">Full Name</label>
               </div>
@@ -26,9 +63,12 @@ const SignUp = () => {
               <div className="form-floating">
                 <input
                   type="email"
+                  value={register.email}
+                  onChange={changeData}
                   className="form-control"
                   id="email"
                   placeholder="info@example.com"
+                  name="email"
                 />
                 <label for="email">Email Address</label>
               </div>
@@ -39,9 +79,12 @@ const SignUp = () => {
                 </span>
                 <input
                   type="password"
+                  value={register.password}
+                  onChange={changeData}
                   className="form-control"
                   id="password"
                   placeholder="Password"
+                  name="password"
                 />
                 <label for="password">Password</label>
               </div>
