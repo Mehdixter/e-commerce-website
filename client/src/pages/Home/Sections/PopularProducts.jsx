@@ -8,7 +8,7 @@ function PopularProducts() {
       <div className="container">
         <div className="row">
           {productsData.map((product) => (
-            <PopularProductCard product={product} />
+            <PopularProductCard product={product} key={product.id} ></PopularProductCard>
           ))}
         </div>
       </div>

@@ -15,12 +15,12 @@ const Hero = ({title}) => {
                   tristique.
                 </p>
                 <p>
-                  <NavLink to="" className="btn btn-secondary me-2">
+                  <NavLink to="/Shop" className="btn btn-secondary me-2">
                     Shop Now
                   </NavLink>
-                  <NavLink to="#" className="btn btn-white-outline">
+                  {/* <NavLink to="#" className="btn btn-white-outline">
                     Explore
-                  </NavLink>
+                  </NavLink> */}
                 </p>
               </div>
             </div>

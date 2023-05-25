@@ -33,7 +33,7 @@ function CartGrid() {
                               <div className="input-group-prepend">
                                 <button className="btn btn-outline-black decrease" type="button">&minus;</button>
                               </div>
-                              <input type="text" className="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+                              <input type="text" className="form-control text-center quantity-amount" defaultValue="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
                               <div className="input-group-append">
                                 <button className="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
@@ -57,7 +57,7 @@ function CartGrid() {
                               <div className="input-group-prepend">
                                 <button className="btn btn-outline-black decrease" type="button">&minus;</button>
                               </div>
-                              <input type="text" className="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+                              <input type="text" className="form-control text-center quantity-amount" defaultValue="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
                               <div className="input-group-append">
                                 <button className="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
@@ -112,7 +112,7 @@ function CartGrid() {
         
                       <div className="row">
                         <div className="col-md-12">
-                          <button className="btn btn-black btn-lg py-3 btn-block" onclick="">Proceed To Checkout</button>
+                          <button className="btn btn-black btn-lg py-3 btn-block">Proceed To Checkout</button>
                         </div>
                       </div>
                     </div>

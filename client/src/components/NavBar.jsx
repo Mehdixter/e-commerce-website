@@ -4,10 +4,8 @@ function NavBar() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "/Shop" },
-    { name: "About", href: "/About" },
-    { name: "Contact", href: "/Contact" },
-    { name: "Services", href: "/Services" },
-    { name: "Login/SignUp", href: "/Login" },
+    { name: "Contact Us", href: "/Contact" }
+    
   ];
 
   return (
@@ -59,15 +57,6 @@ function NavBar() {
                 </NavLink>
               </li>
             </ul>
-            <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
           </div>
         </div>
 

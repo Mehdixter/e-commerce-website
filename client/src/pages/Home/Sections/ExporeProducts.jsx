@@ -1,6 +1,7 @@
 import React from "react";
 import { productsData } from "../../../data/products";
 import ProductCard from "../../../components/ProductCard";
+import { NavLink } from "react-router-dom";
 
 function ExporeProducts() {
   return (
@@ -16,14 +17,14 @@ function ExporeProducts() {
               velit. Aliquam vulputate velit imperdiet dolor tempor tristique.{" "}
             </p>
             <p>
-              <a href="shop.html" className="btn">
+              <NavLink to="" className="btn">
                 Explore
-              </a>
+              </NavLink>
             </p>
           </div>
 
           {productsData.map((product) => {
-            return <ProductCard product={product} />;
+            return <ProductCard product={product} key={product.id}></ProductCard>;
           })}
         </div>
       </div>

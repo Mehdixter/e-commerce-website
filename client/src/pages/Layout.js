@@ -2,17 +2,17 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
-import Contact from "./Contact/Index";
-import About from "./About/Index";
-import Shop from "./Shop/Index";
-import Services from "./Services/Index";
-import Cart from "./Cart/Index";
-import Home from "./Home/Index";
+import Contact from "./Contact/index";
+import About from "./About/index";
+import Shop from "./Shop/index";
+import Services from "./Services/index";
+import Cart from "./Cart/index";
+import Home from "./Home/index";
 import Login from "./Login";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import SignUp from "./SignUp";
-import Checkout from "./Checkout/Index";
+import Checkout from "./Checkout";
 function Layout() {
   return (
     <div>

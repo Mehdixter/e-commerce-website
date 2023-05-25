@@ -3,24 +3,24 @@ import React from "react";
 function WhyUs() {
   return (
     <div>
-      <div class="why-choose-section">
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-lg-6">
-              <h2 class="section-title">Why Choose Us</h2>
+      <div className="why-choose-section">
+        <div className="container">
+          <div className="row justify-content-between">
+            <div className="col-lg-6">
+              <h2 className="section-title">Why Choose Us</h2>
               <p>
                 Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
                 velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
               </p>
 
-              <div class="row my-5">
-                <div class="col-6 col-md-6">
-                  <div class="feature">
-                    <div class="icon">
+              <div className="row my-5">
+                <div className="col-6 col-md-6">
+                  <div className="feature">
+                    <div className="icon">
                       <img
                         src="images/truck.svg"
                         alt="Image"
-                        class="imf-fluid"
+                        className="imf-fluid"
                       />
                     </div>
                     <h3>Fast &amp; Free Shipping</h3>
@@ -31,10 +31,10 @@ function WhyUs() {
                   </div>
                 </div>
 
-                <div class="col-6 col-md-6">
-                  <div class="feature">
-                    <div class="icon">
-                      <img src="images/bag.svg" alt="Image" class="imf-fluid" />
+                <div className="col-6 col-md-6">
+                  <div className="feature">
+                    <div className="icon">
+                      <img src="images/bag.svg" alt="Image" className="imf-fluid" />
                     </div>
                     <h3>Easy to Shop</h3>
                     <p>
@@ -44,13 +44,13 @@ function WhyUs() {
                   </div>
                 </div>
 
-                <div class="col-6 col-md-6">
-                  <div class="feature">
-                    <div class="icon">
+                <div className="col-6 col-md-6">
+                  <div className="feature">
+                    <div className="icon">
                       <img
                         src="images/support.svg"
                         alt="Image"
-                        class="imf-fluid"
+                        className="imf-fluid"
                       />
                     </div>
                     <h3>24/7 Support</h3>
@@ -61,13 +61,13 @@ function WhyUs() {
                   </div>
                 </div>
 
-                <div class="col-6 col-md-6">
-                  <div class="feature">
-                    <div class="icon">
+                <div className="col-6 col-md-6">
+                  <div className="feature">
+                    <div className="icon">
                       <img
                         src="images/return.svg"
                         alt="Image"
-                        class="imf-fluid"
+                        className="imf-fluid"
                       />
                     </div>
                     <h3>Hassle Free Returns</h3>
@@ -80,12 +80,12 @@ function WhyUs() {
               </div>
             </div>
 
-            <div class="col-lg-5">
-              <div class="img-wrap">
+            <div className="col-lg-5">
+              <div className="img-wrap">
                 <img
                   src="images/why-choose-us-img.jpg"
                   alt="Image"
-                  class="img-fluid"
+                  className="img-fluid"
                 />
               </div>
             </div>

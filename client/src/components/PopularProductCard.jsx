@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function PopularProductCard({ product }) {
   return (
@@ -11,7 +12,7 @@ function PopularProductCard({ product }) {
           <h3>{product.name}</h3>
           <p>{product.short_description} </p>
           <p>
-            <a href="#">Read More</a>
+            <NavLink to="#">Read More</NavLink>
           </p>
         </div>
       </div>

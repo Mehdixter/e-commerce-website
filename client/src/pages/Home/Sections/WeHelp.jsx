@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function WeHelp() {
   return (
@@ -30,15 +31,15 @@ function WeHelp() {
             </p>
 
             <ul className="list-unstyled custom-list my-4">
-              <li>Donec vitae odio quis nisl dapibus malesuada</li>
-              <li>Donec vitae odio quis nisl dapibus malesuada</li>
-              <li>Donec vitae odio quis nisl dapibus malesuada</li>
-              <li>Donec vitae odio quis nisl dapibus malesuada</li>
+              <li key="1">Donec vitae odio quis nisl dapibus malesuada</li>
+              <li key="2">Donec vitae odio quis nisl dapibus malesuada</li>
+              <li key="3">Donec vitae odio quis nisl dapibus malesuada</li>
+              <li key="4">Donec vitae odio quis nisl dapibus malesuada</li>
             </ul>
             <p>
-              <a herf="#" class="btn">
+              <NavLink to="#" className="btn">
                 Explore
-              </a>
+              </NavLink>
             </p>
           </div>
         </div>

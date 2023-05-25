@@ -35,7 +35,7 @@ function Testimonials() {
           <img
             src="images/person-1.png"
             alt="Maria Jones"
-            classNameName="rounded mx-auto d-block"
+            className="img-fluid"
           />
           <div className="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
@@ -46,7 +46,7 @@ function Testimonials() {
           <img
             src="images/person-1.png"
             alt="Maria Jones"
-            classNameName="img-fluid"
+            className="img-fluid"
           />
           <div className="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
@@ -57,7 +57,7 @@ function Testimonials() {
           <img
             src="images/person-1.png"
             alt="Maria Jones"
-            classNameName="img-fluid"
+            className="img-fluid"
           />
           <div className="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
