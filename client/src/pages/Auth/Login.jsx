@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.css"
+import "../../style.css"
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -16,7 +16,7 @@ function Login() {
   return (
     
       <div className="site-wrap d-md-flex align-items-stretch">
-        <div className="form-wrap ">
+        <div className="form-wrap form-fluid">
             <div className="form-inner justify-content-center">
                 <h1 className="title">Login</h1>
                 <p className="caption mb-4">Please enter your login details to sign in.</p>
@@ -45,7 +45,7 @@ function Login() {
                         <button type="submit" className="btn btn-primary">Log in</button>
                     </div>
 
-                    <div className="mb-2">Don’t have an account? <NavLink to="signup.html">Sign up</NavLink></div>
+                    <div className="mb-2">Don’t have an account? <NavLink to="/SignUp">Sign up</NavLink></div>
                 </form>
             </div>
         </div>

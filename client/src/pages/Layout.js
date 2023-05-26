@@ -2,17 +2,17 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
-import Contact from "./Contact/index";
-import About from "./About/index";
+import Contact from "./Contact/Index";
+import About from "./About/Index";
 import Shop from "./Shop/index";
-import Services from "./Services/index";
-import Cart from "./Cart/index";
+import Services from "./Services/Index";
+import Cart from "./Cart/Index";
 import Home from "./Home/index";
-import Login from "./Login";
+import Login from "./Auth/Login";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import SignUp from "./SignUp";
-import Checkout from "./Checkout";
+import Signup from "./Auth/Signup";
+import Checkout from "./Checkout/Index";
 function Layout() {
   return (
     <div>
@@ -28,8 +28,6 @@ function Layout() {
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Services" element={<Services />} />
             <Route path="/Cart" element={<Cart />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/SignUp" element={<SignUp />} />
             <Route path="/Checkout" element={<Checkout />} />
           </Routes>
         </main>
@@ -42,3 +40,4 @@ function Layout() {
 }
 
 export default Layout;
+

@@ -52,7 +52,7 @@ function NavBar() {
                 </NavLink>
               </li>
               <li key="user">
-                <NavLink className="nav-link" to="/Login">
+                <NavLink className="nav-link" to="/Auth/Login">
                   <i className="fa-solid fa-user"></i>
                 </NavLink>
               </li>
