@@ -1,6 +1,6 @@
 import React from "react";
-import Billing from "./Sections/Billing";
-import YourOrder from "./Sections/YourOrder";
+// import Billing from "./Sections/Billing";
+// import YourOrder from "./Sections/YourOrder";
 import { NavLink } from "react-router-dom";
 
 const Checkout = () => {

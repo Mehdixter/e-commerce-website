@@ -8,11 +8,7 @@ function Footer() {
         <footer className="footer-section  ">
           <div className="container relative">
             <div className="sofa-img">
-              <img
-                src="images/sofa.png"
-                alt="Image"
-                className="img-fluid"
-              ></img>
+              <img src="images/sofa.png" alt="sofa" className="img-fluid"></img>
             </div>
 
             <div className="row g-5 mb-5">

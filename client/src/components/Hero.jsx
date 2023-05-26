@@ -27,7 +27,7 @@ const Hero = ({ title }) => {
             </div>
             <div className="col-lg-7">
               <div className="hero-img-wrap">
-                <img src="images/couch.png" className="img-fluid" />
+                <img src="images/couch.png" className="img-fluid" alt="couch" />
               </div>
             </div>
           </div>

@@ -22,13 +22,14 @@ function Login() {
             Please enter your login details to sign in.
           </p>
 
-          <form action="#" className="pt-3">
+          <form action="#" className="pt-3" onSubmit={handleSubmit}>
             <div className="form-floating">
               <input
                 type="email"
                 className="form-control"
                 id="email"
                 placeholder="info@example.com"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="email">Email Address</label>
             </div>
@@ -42,6 +43,7 @@ function Login() {
                 className="form-control"
                 id="password"
                 placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
               <label htmlFor="password">Password</label>
             </div>
