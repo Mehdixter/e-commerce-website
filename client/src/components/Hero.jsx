@@ -1,9 +1,10 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-const Hero = ({title}) => {
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { ROUTES } from "../utils/constants";
+const Hero = ({ title }) => {
   return (
     <div>
-        <div className="hero">
+      <div className="hero">
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-lg-5">
@@ -15,7 +16,7 @@ const Hero = ({title}) => {
                   tristique.
                 </p>
                 <p>
-                  <NavLink to="/Shop" className="btn btn-secondary me-2">
+                  <NavLink to={ROUTES.shop} className="btn btn-secondary me-2">
                     Shop Now
                   </NavLink>
                   {/* <NavLink to="#" className="btn btn-white-outline">
@@ -33,7 +34,7 @@ const Hero = ({title}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

@@ -17,10 +17,10 @@ function Hero() {
                 velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
               </p>
               <p>
-                <NavLink href="" className="btn btn-secondary me-2" to="/Shop">
+                <NavLink href="" className="btn btn-secondary me-2" to="/shop">
                   Shop Now
                 </NavLink>
-                <NavLink href="#" className="btn btn-white-outline" to="/Shop">
+                <NavLink href="#" className="btn btn-white-outline" to="/shop">
                   Explore
                 </NavLink>
               </p>

@@ -3,39 +3,39 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
-
 const SignUp = () => {
-  
   const [register, setRegister] = useState({
     name: "",
-    email:"",
-    password:""
-  })
+    email: "",
+    password: "",
+  });
   function changeData(event) {
     setRegister((data) => ({
       ...data,
       [event.target.name]: event.target.value,
       [event.target.email]: event.target.value,
-      [event.target.password]: event.target.value
+      [event.target.password]: event.target.value,
     }));
   }
   //send POST request to laravel
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     const data = {
       name: register.name,
       email: register.email,
       password: register.password,
-      password_confirmation: register.password
+      password_confirmation: register.password,
     };
-  
-    axios.post("http://127.0.0.1:8000/api/register", data).then(result=>{
-      console.log(result.data)
-    })
-    .catch(error => {
-      console.error(error);
-    });
+
+    axios
+      .post("http://127.0.0.1:8000/api/register", data)
+      .then((result) => {
+        console.log(result.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -98,8 +98,8 @@ const SignUp = () => {
                     id="remember"
                   />
                   <label htmlFor="services" className="form-check-label">
-                    I agree to the <NavLink to="#">Terms of Service</NavLink> and{" "}
-                    <NavLink to="#">Privacy Policy</NavLink>
+                    I agree to the <NavLink to="#">Terms of Service</NavLink>{" "}
+                    and <NavLink to="#">Privacy Policy</NavLink>
                   </label>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const SignUp = () => {
               </div>
 
               <div className="mb-2">
-                Already a member? <NavLink to="/Login">Log in</NavLink>
+                Already a member? <NavLink to="/login">Log in</NavLink>
               </div>
             </form>
           </div>
