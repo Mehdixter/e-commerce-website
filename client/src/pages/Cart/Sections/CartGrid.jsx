@@ -61,7 +61,7 @@ function CartGrid() {
             </div>
             <div className="row">
               <div className="col-md-12">
-                <label className="text-black h4" for="coupon">
+                <label className="text-black h4" htmlFor="coupon">
                   Coupon
                 </label>
                 <p>Enter your coupon code if you have one.</p>
@@ -108,12 +108,12 @@ function CartGrid() {
 
                 <div className="row">
                   <div className="col-md-12">
-                    <button
+                    <NavLink
                       className="btn btn-black btn-lg py-3 btn-block"
-                      onclick="window.location='checkout.html'"
+                      to={"/checkout"}
                     >
                       Proceed To Checkout
-                    </button>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -149,6 +149,7 @@ const CartItem = ({ product }) => {
             type="text"
             className="form-control text-center quantity-amount"
             value={product.quantity}
+            onChange={() => {}}
             placeholder=""
             aria-label="Example text with button addon"
             aria-describedby="button-addon1"
