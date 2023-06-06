@@ -355,7 +355,7 @@ th{
     border-radius: 0px 10px 10px 0px;
    
 }
-/*filterBtn {
+/* filterBtn {
     background-color: rgba(51, 51, 51, 0.05);
     border-radius: 8px;
     border-width: 0;
@@ -376,7 +376,7 @@ th{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  }*/
+  } */
 
  #createProductBack{
     justify-content: right;
@@ -431,7 +431,7 @@ th{
 
 .hero p {
   color: rgba(255, 255, 255, 0.5);
-  margin-botom: 30px;
+  margin-bottom: 30px;
 }
 
 .hero .hero-img-wrap {

@@ -26,6 +26,7 @@ import Login from "./pages/Auth/Login";
 import SignUp from "./pages/Auth/Signup";
 import AuthLayout from "./layouts/AuthLayout";
 import { ROUTES } from "./utils/constants";
+import './utils/constants';
 
 
 const App = () => {
@@ -44,32 +45,21 @@ const App = () => {
           <Route path={ROUTES.login} element={<Login />} />
           <Route path={ROUTES.signup} element={<SignUp />} />
           <Route path="*" element={<h1>Not Found</h1>} />
-      
 
-
-    <Sidebar>
-        <Routes>
           <Route path="/" element={<Dashboard />} />
-        
           <Route path="/category" element={<Category />} />
           <Route path="/comment" element={<Comment />} />
           <Route path="/commentView" element={<CommentView />} />
-
           <Route path="/dashboard" element={<Dashboard />} />
-
           <Route path="/order" element={<Order />} />
           <Route path="/orderDetail" element={<Detail />} />
           <Route path="/orderView" element={<OrderView />} />
-
           <Route path="/productList" element={<ProductList />} />
           <Route path="/productView" element={<ProductView />} />
           <Route path="/productUpdate" element={<ProductUpdate />} />
           <Route path="/productCreate" element={<ProductCreate />} />
-
           <Route path="/profile" element={<Profile />} />
         </Routes>
-     </Sidebar> 
-     </Routes>
     </BrowserRouter>
   );
 };

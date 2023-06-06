@@ -2,9 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 function NavBar() {
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Shop", href: "/shop" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Home", to: "/" },
+    { name: "Shop", to: "/shop" },
+    { name: "Contact Us", to: "/contact" },
   ];
 
   return (
