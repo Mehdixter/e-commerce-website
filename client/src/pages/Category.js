@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../App.css';
+import '../AdminApp.css';
 import { useState  , useEffect } from "react";
 import {BsArrow90DegUp}from "react-icons/fa";
 

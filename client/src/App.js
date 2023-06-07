@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./AdminApp.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard.js";
 import Category from "./pages/Category.js";
