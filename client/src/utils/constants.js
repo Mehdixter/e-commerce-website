@@ -10,5 +10,14 @@ export const ROUTES = {
     productView: "/productView",
     productUpdate: "/productUpdate",
     productCreate: "/productCreate",
-    profile: "/profile"
-}
+    profile: "/profile",
+  home: "/",
+  login: "/login",
+  signup: "/signup",
+  shop: "/shop",
+  cart: "/cart",
+  checkout: "/checkout",
+  services: "/services",
+  contact: "/contact",
+  about: "/about",
+};
