@@ -1,11 +1,12 @@
 import React from "react";
-import "../../App.css"
+import "../../App.css";
 import { NavLink } from "react-router-dom";
 function NavBar() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "/shop" },
     { name: "Contact Us", href: "/contact" },
+    { name: "Admin", href: "/dashboard" },
   ];
 
   return (
@@ -31,14 +32,8 @@ function NavBar() {
                     <NavLink
                       key={item.name}
                       to={item.href}
-                      className={(isActive) => {
-                        return (
-                          "custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 " +
-                          (isActive
-                            ? "nav-item active text-decoration-none custom-navbar-nav"
-                            : "nav-link")
-                        );
-                      }}
+                      activeClassName="active"
+                      className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 nav-link text-decoration-none custom-navbar-nav"
                     >
                       {item.name}
                     </NavLink>

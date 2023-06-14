@@ -7,9 +7,9 @@ function AppLayout() {
   return (
     <div>
       <NavBar />
-      <main>
+      
         <Outlet />
-      </main>
+      
       <Footer />
     </div>
   );

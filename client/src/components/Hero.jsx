@@ -19,9 +19,7 @@ const Hero = ({ title }) => {
                   <NavLink to={ROUTES.shop} className="btn btn-secondary me-2">
                     Shop Now
                   </NavLink>
-                  {/* <NavLink to="#" className="btn btn-white-outline">
-                    Explore
-                  </NavLink> */}
+                  
                 </p>
               </div>
             </div>
