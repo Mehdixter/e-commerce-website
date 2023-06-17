@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"
+import "./App.css";
 import "./AdminApp.css";
 import AppLayout from "./layouts/AppLayout";
 import AdminLayout from "./layouts/AdminLayout";
@@ -31,8 +31,8 @@ import SignUp from "./pages/Auth/Signup";
 const App = () => {
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<AdminLayout/>}>
+      <Routes>
+        <Route path="/" element={<AdminLayout />}>
           <Route path={ROUTES.dashboard} element={<Dashboard />} />
           <Route path={ROUTES.category} element={<Category />} />
           <Route path={ROUTES.comment} element={<Comment />} />
@@ -45,7 +45,7 @@ const App = () => {
           <Route path={ROUTES.productUpdate} element={<ProductUpdate />} />
           <Route path={ROUTES.productCreate} element={<ProductCreate />} />
           <Route path={ROUTES.profile} element={<Profile />} />
-          </Route>
+        </Route>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
           <Route path={ROUTES.contact} element={<Contact />} />
@@ -56,8 +56,26 @@ const App = () => {
           <Route path={ROUTES.checkout} element={<Checkout />} />
         </Route>
         <Route element={<AuthLayout />}>
-          <Route path={ROUTES.login} element={<Login />} />
-          <Route path={ROUTES.signup} element={<SignUp />} />
+          <Route
+            path={ROUTES.login}
+            element={
+              <Login
+                image="images/img-bg-1.jpg"
+                title="Login"
+                caption="Please enter your login details to sign in."
+              />
+            }
+          />
+          <Route
+            path={ROUTES.signup}
+            element={
+              <SignUp
+                image="images/img-bg-2.jpg"
+                title="Sign up"
+                caption="Create your account in seconds."
+              />
+            }
+          />
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
