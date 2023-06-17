@@ -57,7 +57,7 @@ const Sidebar = ({children}) => {
 
            <div  className="sidebar">
                <div className="top_section">
-                   <h1  className="logo">ArtBS</h1>
+                   <NavLink to="/"><h1  className="logo">ArtBS</h1></NavLink>
                    <div  className="bars">
                        <FaBars onClick={toggle}/>
                    </div>

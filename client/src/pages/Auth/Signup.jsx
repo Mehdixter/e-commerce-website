@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-
+import "../../Auth.css";
 const SignUp = () => {
   const [register, setRegister] = useState({
     name: "",
@@ -41,7 +41,7 @@ const SignUp = () => {
   return (
     <div>
       <div className="site-wrap col-lg-12 d-lg-flex align-items-stretch justify-content-center">
-        <div className="bg-img"></div>
+        <div className="bg-img"><img src="images/img-bg-2.jpg" /></div>
         <div className="form-wrap col-lg-5">
           <div className="form-inner text-center">
             <h1 className="title">Sign up</h1>
