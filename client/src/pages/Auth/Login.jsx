@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "../../style.css";
-import { Link, NavLink, useOutletContext } from "react-router-dom";
+import { Link, Navigate, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { AuthContext } from "../../context/authContext";
 function Login({ image, title, caption }) {
   const { setImage, setTitle, setCaption } = useOutletContext();
+  const { user, login } = useContext(AuthContext);
 
   useEffect(() => {
     setImage(image);
     setTitle(title);
     setCaption(caption);
-  }, [setImage, image, setTitle, setCaption, title, caption]);
+  }, [image, title, caption]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,20 +20,26 @@ function Login({ image, title, caption }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.post("", { email, password });
+    // axios.post("", { email, password });
+    login(email, password);
   };
+
+  if (user) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <>
-      <form action="#" className="pt-3">
+      <form className="pt-3" onSubmit={handleSubmit}>
         <div className="form-floating">
           <input
             type="email"
             className="form-control"
             id="email"
             placeholder="info@example.com"
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <label for="email">Email Address</label>
+          <label htmlFor="email">Email Address</label>
         </div>
 
         <div className="form-floating">
@@ -40,14 +48,15 @@ function Login({ image, title, caption }) {
             className="form-control"
             id="password"
             placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
         </div>
 
         <div className="d-flex justify-content-between">
           <div className="form-check">
             <input type="checkbox" className="form-check-input" id="remember" />
-            <label for="remember" className="form-check-label">
+            <label htmlFor="remember" className="form-check-label">
               Keep me logged in
             </label>
           </div>

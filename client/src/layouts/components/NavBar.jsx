@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../App.css";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 function NavBar() {
   const navigation = [
     { name: "Home", href: "/" },
@@ -8,6 +9,8 @@ function NavBar() {
     { name: "Contact Us", href: "/contact" },
     { name: "Admin", href: "/dashboard" },
   ];
+
+  const { user, logout } = useContext(AuthContext);
 
   return (
     <header>
@@ -32,7 +35,7 @@ function NavBar() {
                     <NavLink
                       key={item.name}
                       to={item.href}
-                      activeClassName="active"
+                      // activeClassName="active"
                       className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 nav-link text-decoration-none custom-navbar-nav"
                     >
                       {item.name}
@@ -48,9 +51,15 @@ function NavBar() {
                   </NavLink>
                 </li>
                 <li key="user">
-                  <NavLink className="nav-link" to="/login">
-                    <i className="fa-solid fa-user"></i>
-                  </NavLink>
+                  {user ? (
+                    <NavLink className="nav-link" onClick={logout}>
+                      <i className="fa fa-sign-out"></i>
+                    </NavLink>
+                  ) : (
+                    <NavLink className="nav-link" to="/login">
+                      <i className="fa-solid fa-user"></i>
+                    </NavLink>
+                  )}
                 </li>
               </ul>
             </div>
