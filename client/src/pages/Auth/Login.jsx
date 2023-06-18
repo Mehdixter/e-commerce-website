@@ -1,9 +1,17 @@
-import React from "react";
-import "../../Auth.css";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import "../../style.css";
+import { Link, NavLink, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-function Login() {
+function Login({ image, title, caption }) {
+  const { setImage, setTitle, setCaption } = useOutletContext();
+
+  useEffect(() => {
+    setImage(image);
+    setTitle(title);
+    setCaption(caption);
+  }, [setImage, image, setTitle, setCaption, title, caption]);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   //send POST request to laravel
@@ -14,44 +22,52 @@ function Login() {
   };
 
   return (
-    
-    <div className="site-wrap d-md-flex align-items-stretch">
-        <div className="bg-img"><img src="images/img-bg-2.jpg"/></div>
-        <div className="form-wrap">
-            <div className="form-inner">
-                <h1 className="title">Login</h1>
-                <p className="caption mb-4">Please enter your login details to sign in.</p>
-
-                <form action="#" className="pt-3">
-                    <div className="form-floating">
-                        <input type="email" className="form-control" id="email" placeholder="info@example.com"/>
-                        <label htmlFor="email">Email Address</label>
-                    </div>
-
-                    <div className="form-floating">
-                        <span className="password-show-toggle js-password-show-toggle"><span className="uil"></span></span>
-                        <input type="password" className="form-control" id="password" placeholder="Password"/>
-                        <label htmlFor="password">Password</label>
-                    </div>
-
-                    <div className="d-flex justify-content-between">
-                        <div className="form-check">
-                            <input type="checkbox" className="form-check-input" id="remember"/>
-                            <label htmlFor="remember" className="form-check-label">Keep me logged in</label>
-                        </div>
-                        <div><NavLink to="#">Forgot password?</NavLink></div>
-                    </div>
-                    
-                    <div className="d-grid mb-4">
-                        <button type="submit" className="btn btn-primary">Log in</button>
-                    </div>
-
-                    <div className="mb-2">Don’t have an account? <NavLink to="/signup">Sign up</NavLink></div>
-
-                </form>
-            </div>
+    <>
+      <form action="#" className="pt-3">
+        <div className="form-floating">
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            placeholder="info@example.com"
+          />
+          <label for="email">Email Address</label>
         </div>
-    </div>
+
+        <div className="form-floating">
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            placeholder="Password"
+          />
+          <label for="password">Password</label>
+        </div>
+
+        <div className="d-flex justify-content-between">
+          <div className="form-check">
+            <input type="checkbox" className="form-check-input" id="remember" required/>
+            <label for="remember" className="form-check-label">
+              Keep me logged in
+            </label>
+          </div>
+          <div>
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+
+        <div className="d-grid mb-4">
+          <button type="submit" className="btn btn-primary">
+            Log in
+          </button>
+        </div>
+
+        <div className="mb-2">
+          Don’t have an account?
+          <Link to="/signup"> Sign up</Link>
+        </div>
+      </form>
+    </>
   );
 }
 
