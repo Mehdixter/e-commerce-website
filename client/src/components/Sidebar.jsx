@@ -72,9 +72,6 @@ const Sidebar = ({children}) => {
                }
            </div>
            </div>
-           <div className='col-10'>
-                <main>{children}</main>
-           </div>
         </div>
         </div>
     );

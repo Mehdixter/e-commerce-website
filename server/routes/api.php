@@ -21,3 +21,9 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/test/set-cookie', function () {
+    $token = 'dummy_token';
+
+    return response('Cookie set')->cookie('token', $token, 60); // 60 minutes expiry
+});

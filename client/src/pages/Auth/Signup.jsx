@@ -2,9 +2,23 @@ import React, { useEffect } from "react";
 import { Link, NavLink, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import Cookies from 'js-cookie';
 
 const SignUp = ({ image, title, caption }) => {
   const { setImage, setTitle, setCaption } = useOutletContext();
+  const [token, setToken] = useState('');
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:8000/api/register')
+    .then(res => res.json())
+    .then(data => {
+      setToken(data.token);
+    })
+    .catch(error => {
+      console.log('Error fetching token',error);
+    });
+  },[])
+  Cookies.set('token', token, { expires: 7 });
 
   useEffect(() => {
     setImage(image);

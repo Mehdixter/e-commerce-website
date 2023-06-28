@@ -83,7 +83,7 @@ export default function ProductCreate(){
                                 value={category} onChange={event => setCategory(event.target.value)}
                             />
                             <br />
-                            <button type="button" onClick={postData} class="btn btn-success">Add</button>&nbsp;
+                            <button type="button" onClick={postData} class="btn btn-success"><NavLink>Add</NavLink></button>&nbsp;
                             <NavLink  to="/productList" className="btn btn-primary" id="createProductBack">Back</NavLink>
                         </div>
                     
