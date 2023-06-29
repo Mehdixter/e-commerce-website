@@ -1,38 +1,27 @@
 import React, { useEffect } from "react";
-import { Link, NavLink, useOutletContext } from "react-router-dom";
+import { Link, Navigate, useOutletContext } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
-import Cookies from 'js-cookie';
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 const SignUp = ({ image, title, caption }) => {
   const { setImage, setTitle, setCaption } = useOutletContext();
-  const [token, setToken] = useState('');
-
-  useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/register')
-    .then(res => res.json())
-    .then(data => {
-      setToken(data.token);
-    })
-    .catch(error => {
-      console.log('Error fetching token',error);
-    });
-  },[])
-  Cookies.set('token', token, { expires: 7 });
+  const { register, user } = useContext(AuthContext);
 
   useEffect(() => {
     setImage(image);
     setTitle(title);
     setCaption(caption);
-  }, [setImage, image]);
+  }, [setImage, image, setTitle, title, setCaption, caption]);
 
-  const [register, setRegister] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
+
   function changeData(event) {
-    setRegister((data) => ({
+    setFormData((data) => ({
       ...data,
       [event.target.name]: event.target.value,
       [event.target.email]: event.target.value,
@@ -44,21 +33,18 @@ const SignUp = ({ image, title, caption }) => {
     event.preventDefault();
 
     const data = {
-      name: register.name,
-      email: register.email,
-      password: register.password,
-      password_confirmation: register.password,
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      password_confirmation: formData.password,
     };
 
-    axios
-      .post("http://127.0.0.1:8000/api/register", data)
-      .then((result) => {
-        console.log(result.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    register(data);
   };
+
+  if (user) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <>
@@ -69,7 +55,7 @@ const SignUp = ({ image, title, caption }) => {
             className="form-control"
             id="name"
             placeholder="Full Name"
-            value={register.name}
+            value={formData.name}
             onChange={changeData}
             name="name"
           />
@@ -82,7 +68,7 @@ const SignUp = ({ image, title, caption }) => {
             className="form-control"
             id="email"
             placeholder="info@example.com"
-            value={register.email}
+            value={formData.email}
             onChange={changeData}
             name="email"
           />
@@ -95,7 +81,7 @@ const SignUp = ({ image, title, caption }) => {
             className="form-control"
             id="password"
             placeholder="Password"
-            value={register.password}
+            value={formData.password}
             onChange={changeData}
             name="password"
           />
@@ -106,8 +92,8 @@ const SignUp = ({ image, title, caption }) => {
           <div className="form-check">
             <input type="checkbox" className="form-check-input" id="remember" />
             <label htmlFor="remember" className="form-check-label">
-              I agree to the <a href="#">Terms of Service</a> and{" "}
-              <a href="#">Privacy Policy</a>
+              I agree to the <a href="/">Terms of Service</a> and{" "}
+              <a href="/">Privacy Policy</a>
             </label>
           </div>
         </div>
