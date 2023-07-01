@@ -10,6 +10,8 @@ import {
     
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import "../AdminApp.css";
 
 
 const Sidebar = ({children}) => {
@@ -48,34 +50,38 @@ const Sidebar = ({children}) => {
             name:"Profile",
             icon:<FaUserAlt/>
         },
+        {
+            path:"/test",
+            name:"test",
+            icon:<FaUserAlt/>
+        },
         
     ]
     return (
         <div >
-             <div className='row'>
-            <div className='col-2'>
-
-           <div  className="sidebar">
-               <div className="top_section">
-                   <h1  className="logo">ArtBS</h1>
-                   <div  className="bars">
-                       <FaBars onClick={toggle}/>
-                   </div>
-               </div>
-               {
-                   menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                           <div className="icon">{item.icon}</div>
-                           <div  className="link_text">{item.name}</div>
-                       </NavLink>
-                   ))
-               }
-           </div>
-           </div>
-           <div className='col-10'>
-                <main>{children}</main>
-           </div>
-        </div>
+            <div className='row'>
+                <div className='col-2'>
+                    <div  className="sidebar">
+                        <div className="top_section">
+                            <h1  className="logo">ArtBS</h1>
+                            <div  className="bars">
+                                <FaBars onClick={toggle}/>
+                            </div>
+                        </div>
+                        {
+                            menuItem.map((item, index)=>(
+                                <NavLink to={item.path} key={index} className="link" activeclassName="active">
+                                    <div className="icon">{item.icon}</div>
+                                    <div  className="link_text">{item.name}</div>
+                                </NavLink>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className='col-10'>
+                    <main><Outlet /></main>
+                </div>
+            </div>
         </div>
     );
 };

@@ -11,6 +11,7 @@ export const ROUTES = {
   productUpdate: "/productUpdate",
   productCreate: "/productCreate",
   profile: "/profile",
+  test: "/test",
   home: "/",
   login: "/login",
   signup: "/signup",
