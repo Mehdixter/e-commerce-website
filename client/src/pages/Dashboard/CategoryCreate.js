@@ -1,6 +1,5 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import '../AdminApp.css';
+
 import { useState  , useEffect } from "react";
 import axios from "axios";
 
@@ -14,14 +13,14 @@ export default function CategoryCreate(){
         const formData= new FormData();
         formData.append('nameCategory', nameCategory);
         formData.append('description',description);
-        const responce= await axios.post("http://127.0.0.1:8000/api/category", formData, {
+        const responce= await axios.post("c", formData, {
             headers:{'Content-Type':"multipart/form-data"},
         } );
  
         if(responce)
         {
             console.log(responce)
-            setMessage(responce.message); //"message": "Product successfully created."
+            setMessage(responce.message); //"message": "Category successfully created."
            
         }
     }

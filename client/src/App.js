@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+//import "./App.css";
 import "./AdminApp.css";
 import AppLayout from "./layouts/AppLayout";
 import AdminLayout from "./layouts/AdminLayout";
@@ -7,19 +7,20 @@ import AuthLayout from "./layouts/AuthLayout";
 import { ROUTES } from "./utils/constants";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard.js";
-import Category from "./pages/Category.js";
-import Comment from "./pages/Comment.js";
-import ProductList from "./pages/ProductList.js";
-import ProductView from "./pages/ProductView.js";
-import ProductUpdate from "./pages/ProductUpdate.js";
-import ProductCreate from "./pages/ProductCreate.js";
-import Order from "./pages/Order.js";
-import Profile from "./pages/Profile.js";
-import Test from "./pages/Test.js";
-import OrderDetail from "./pages/OrderDetail.js";
-import OrderView from "./pages/OrderView.js";
-import CommentView from "./pages/CommentView.js";
+import Dashboard from "./pages/Dashboard/Dashboard.js";
+import Category from "./pages/Dashboard/Category.js";
+import Comment from "./pages/Dashboard/Comment.js";
+import ProductList from "./pages/Dashboard/ProductList.js";
+import ProductView from "./pages/Dashboard/ProductView.js";
+import ProductUpdate from "./pages/Dashboard/ProductUpdate.js";
+import ProductCreate from "./pages/Dashboard/ProductCreate.js";
+import Order from "./pages/Dashboard/Order.js";
+import Profile from "./pages/Dashboard/Profile.js";
+import Discount from "./pages/Dashboard/Discount.js";
+import DiscountCreate from "./pages/Dashboard/DiscountCreate.js";
+import OrderDetail from "./pages/Dashboard/OrderDetail.js";
+import OrderView from "./pages/Dashboard/OrderView.js";
+import CommentView from "./pages/Dashboard/CommentView.js";
 
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -56,7 +57,8 @@ const App = () => {
 
             <Route path={ROUTES.profile} element={<Profile />} />
 
-            <Route path={ROUTES.test} element={<Test />} />
+            <Route path={ROUTES.discount} element={<Discount />} />
+            <Route path={ROUTES.discountCreate} element={<DiscountCreate />} />
           </Route>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />

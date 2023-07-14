@@ -28,7 +28,7 @@ class UserStoreRequest extends FormRequest
                 'email' => 'required|string|max:500',
                 'password' => 'required|string|max:258',
                 'phone' => 'required|numeric|digits:10',
-                'adress' => 'required|string|max:258'
+                'address' => 'required|string|max:258'
             ];
         } else {
             return [
@@ -37,7 +37,7 @@ class UserStoreRequest extends FormRequest
                 'email' => 'required|string|max:500',
                 'password' => 'required|string|max:258',
                 'phone' => 'required|numeric|digits:10',
-                'adress' => 'required|string|max:258'
+                'address' => 'required|string|max:258'
             ];
         }
     }
@@ -51,7 +51,7 @@ class UserStoreRequest extends FormRequest
                 'email.required' => 'Email is required!',
                 'password.required' => 'Password is required!',
                 'phone.required' => 'Phone is required!',
-                'Adress.required' => 'Adress is required!'
+                'address.required' => 'Address is required!'
             ];
         } else {
             return [
@@ -60,7 +60,7 @@ class UserStoreRequest extends FormRequest
                 'email.required' => 'Email is required!',
                 'password.required' => 'Password is required!',
                 'phone.required' => 'Phone is required!',
-                'Adress.required' => 'Adress is required!'
+                'address.required' => 'Address is required!'
             ];   
         }
     }

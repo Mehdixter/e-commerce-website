@@ -7,6 +7,7 @@ import {
     FaCommentAlt,
     FaThList,
     FaShopify,
+    FaMoneyCheckAlt,
     
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
@@ -51,9 +52,9 @@ const Sidebar = ({children}) => {
             icon:<FaUserAlt/>
         },
         {
-            path:"/test",
-            name:"test",
-            icon:<FaUserAlt/>
+            path:"/discount",
+            name:"discount",
+            icon:<FaMoneyCheckAlt/>
         },
         
     ]
@@ -63,7 +64,7 @@ const Sidebar = ({children}) => {
                 <div className='col-2'>
                     <div  className="sidebar">
                         <div className="top_section">
-                            <h1  className="logo">ArtBS</h1>
+                        <NavLink to="/"><h1  className="logo">ArtBS</h1></NavLink>
                             <div  className="bars">
                                 <FaBars onClick={toggle}/>
                             </div>
@@ -82,6 +83,8 @@ const Sidebar = ({children}) => {
                     <main><Outlet /></main>
                 </div>
             </div>
+             
+       
         </div>
     );
 };

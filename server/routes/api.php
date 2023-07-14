@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\PayementController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +23,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout']);
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+    Route::post('/logout', [AuthController::class, 'logout']);
 });
 
 //api crud admin
@@ -63,3 +67,6 @@ Route::get('comments/{id}', [CommentController::class, 'show']);
 Route::post('comments', [CommentController::class, 'store']); 
 Route::put('commentsUpdate/{id}', [CommentController::class, 'update']);
 Route::delete('commentsDelete/{id}', [CommentController::class, 'destroy']);
+
+//Payement
+Route::get('payements', [PayementController::class, 'index']); 

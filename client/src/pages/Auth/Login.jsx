@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import "../../style.css";
 import { Link, Navigate, useOutletContext } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
 import { AuthContext } from "../../context/authContext";
 function Login({ image, title, caption }) {
   const { setImage, setTitle, setCaption } = useOutletContext();
@@ -12,16 +11,15 @@ function Login({ image, title, caption }) {
     setImage(image);
     setTitle(title);
     setCaption(caption);
-  }, [image, title, caption]);
+  }, [image, title, caption, setImage, setTitle, setCaption]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   //send POST request to laravel
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    // axios.post("", { email, password });
-    login(email, password);
+    login({ email, password });
   };
 
   if (user) {
@@ -61,7 +59,7 @@ function Login({ image, title, caption }) {
             </label>
           </div>
           <div>
-            <a href="#">Forgot password?</a>
+            <a href="/">Forgot password?</a>
           </div>
         </div>
 

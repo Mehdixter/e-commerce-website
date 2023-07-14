@@ -1,6 +1,5 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import '../AdminApp.css';
+
 import { useState  , useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 

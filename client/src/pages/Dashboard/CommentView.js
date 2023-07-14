@@ -1,7 +1,7 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import Button from 'react-bootstrap/Button';
-import '../AdminApp.css';
+
 import { useState  , useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 

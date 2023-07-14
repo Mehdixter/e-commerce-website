@@ -30,7 +30,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
                 'phone' => $request->phone,
-                'adress' => $request->adress
+                'address' => $request->address
             ]);
       
             // Return Json Response
@@ -78,7 +78,7 @@ class UserController extends Controller
             $user->email = $request->email;
             $user->password = $request->password;
             $user->phone = $request->phone;
-            $user->adress = $request->adress;
+            $user->address = $request->address;
             $user->role = $request->role;
       
             // Update User
